@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F7DFF3A-1E2C-4B46-AD8D-57154AB47593}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gestion_stock</RootNamespace>
+    <AssemblyName>gestion_stock</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Program Files (x86)\Bunifu Technologies\Bunifu Framework Manager\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connexion.cs" />
+    <Compile Include="Etat_achats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat_achats.Designer.cs">
+      <DependentUpon>Etat_achats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etat_commende.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat_commende.Designer.cs">
+      <DependentUpon>Etat_commende.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etat_vents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat_vents.Designer.cs">
+      <DependentUpon>Etat_vents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fachats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fachats.Designer.cs">
+      <DependentUpon>Fachats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fcommande2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fcommande2.Designer.cs">
+      <DependentUpon>Fcommande2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fcommende.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fcommende.Designer.cs">
+      <DependentUpon>Fcommende.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fetat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fetat.Designer.cs">
+      <DependentUpon>Fetat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fetat_client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fetat_client.Designer.cs">
+      <DependentUpon>Fetat_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fetat_fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fetat_fournisseur.Designer.cs">
+      <DependentUpon>Fetat_fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fetat_produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fetat_produit.Designer.cs">
+      <DependentUpon>Fetat_produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finventaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finventaire.Designer.cs">
+      <DependentUpon>Finventaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finventair_achat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finventair_achat.Designer.cs">
+      <DependentUpon>Finventair_achat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finventair_vents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finventair_vents.Designer.cs">
+      <DependentUpon>Finventair_vents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmenu.Designer.cs">
+      <DependentUpon>Fmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fmenu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmenu2.Designer.cs">
+      <DependentUpon>Fmenu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fpaiement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpaiement.Designer.cs">
+      <DependentUpon>Fpaiement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fpersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpersonne.Designer.cs">
+      <DependentUpon>Fpersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fproduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fproduit.Designer.cs">
+      <DependentUpon>Fproduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fpv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpv.Designer.cs">
+      <DependentUpon>Fpv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frecette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frecette.Designer.cs">
+      <DependentUpon>Frecette.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fsauvegarde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fsauvegarde.Designer.cs">
+      <DependentUpon>Fsauvegarde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funite.Designer.cs">
+      <DependentUpon>Funite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fvents.Designer.cs">
+      <DependentUpon>Fvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fvents2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fvents2.Designer.cs">
+      <DependentUpon>Fvents2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_achats.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>liste_achats.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="liste_client.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>liste_client.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="liste_commende.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>liste_commende.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="liste_vents.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>liste_vents.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list_fournisseur.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>list_fournisseur.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list_produit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>list_produit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu3.Designer.cs">
+      <DependentUpon>Menu3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Etat_achats.resx">
+      <DependentUpon>Etat_achats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat_commende.resx">
+      <DependentUpon>Etat_commende.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat_vents.resx">
+      <DependentUpon>Etat_vents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fachats.resx">
+      <DependentUpon>Fachats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fcommande2.resx">
+      <DependentUpon>Fcommande2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fcommende.resx">
+      <DependentUpon>Fcommende.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fetat.resx">
+      <DependentUpon>Fetat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fetat_client.resx">
+      <DependentUpon>Fetat_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fetat_fournisseur.resx">
+      <DependentUpon>Fetat_fournisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fetat_produit.resx">
+      <DependentUpon>Fetat_produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finventaire.resx">
+      <DependentUpon>Finventaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finventair_achat.resx">
+      <DependentUpon>Finventair_achat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finventair_vents.resx">
+      <DependentUpon>Finventair_vents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fmenu.resx">
+      <DependentUpon>Fmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fmenu2.resx">
+      <DependentUpon>Fmenu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpaiement.resx">
+      <DependentUpon>Fpaiement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpersonne.resx">
+      <DependentUpon>Fpersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fproduit.resx">
+      <DependentUpon>Fproduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpv.resx">
+      <DependentUpon>Fpv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frecette.resx">
+      <DependentUpon>Frecette.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fsauvegarde.resx">
+      <DependentUpon>Fsauvegarde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funite.resx">
+      <DependentUpon>Funite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fvents.resx">
+      <DependentUpon>Fvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fvents2.resx">
+      <DependentUpon>Fvents2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liste_achats.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>liste_achats.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liste_client.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>liste_client.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liste_commende.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>liste_commende.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liste_vents.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>liste_vents.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list_fournisseur.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>list_fournisseur.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list_produit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>list_produit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu3.resx">
+      <DependentUpon>Menu3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entre-logiine.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gestion-des-stocks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32133936-ic-nes-de-gestion-des-affaires-tablies-avec-le-personnel-de-l-quipe-des-affaires-avatars-isol-illust.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajou_client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simprimer-client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-4-Male-user-edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_man_usersearch_thesearch_theclient_2356.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supp-produit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fournisseur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supp-produit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valid.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exittt.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paiement1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajouter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
